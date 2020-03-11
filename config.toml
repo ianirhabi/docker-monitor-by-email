@@ -1,0 +1,13 @@
+ # filename: config.toml
+[dataname]
+CONFIG_SMTP_HOST = "smtp.gmail.com"
+CONFIG_SMTP_PORT = 587
+CONFIG_EMAIL = "youremailadress@gmail.com"
+CONFIG_PASSWORD = "YOURPASSWORDEMAIL"
+SEND_TO = "sendtoemail@xyz.com"
+SEND_CC1 = "sendcc1email@xyz.com"
+SEND_CC2 = "sendcc2email@xyz.com"
+
+[output]
+directory = "./output"
+format = "toml"

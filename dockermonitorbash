@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# created by Andrian Latif on 02-18-2020
+# for monitoring system service docker 
+
+list_of_containers="yourservicedocker_1 yourservicedocker_2 yourservicedocker_3"
+
+containers='docker ps -f status=running --format "{{.Names}}"'
+__directory_currently="/etc/dockermonitor"
+
+main(){
+  for (( ; ; ))
+  do
+     Program
+     sleep 5s
+     reset
+  done
+}
+
+Program(){
+      echo "" >  $__directory_currently/list_container_stop.txt
+      for container in $list_of_containers
+      do
+        if  tput setaf 2; $containers | grep -w $container
+        then 
+          echo "$container online" 
+        else 
+          tput setaf 1;
+          echo "$container offline" >> $__directory_currently/list_container_stop.txt
+          echo "$container offline"
+        fi
+      done
+}
+
+main $@
