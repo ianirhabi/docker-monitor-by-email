@@ -1,5 +1,5 @@
-add your docker container service list to variable list_of_containers on dockermonitorbash
-and add some of your email information on config.toml 
+Add your list of docker container service into the list_of_containers variable on dockermonitorbash
+and Add some your email information on config.toml 
 
 How to install this app:
 
